@@ -3,9 +3,21 @@ $("#currentDay").text(moment().format("DD, MMMM, YYYY"));
 var saveBtn = $('.row').children('.btn');
 const textContent = document.getElementsByClassName('content');
 
+var text9 = $("#text9");
+var text10 = $("#text10");
+var text11 = $("#text11");
+var text12 = $("#text12");
+var text13 = $("#text13");
+var text14 = $("#text14");
+var text15 = $("#text15");
+var text16 = $("#text16");
+var text17 = $("#text17");
+
 
 const rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format('H'));
+
+
 
 Array.from(rows).forEach(row=>{
     let
@@ -31,9 +43,26 @@ function setColor(element, color){
     element.style.backgroundColor = color;
 }
 
-saveBtn.on('click',function(){
-    console.log("howdy");
-    var textInput = $(this.parentNode).children('.content').attr('id');
-    var inputToStorage = $(this.parentNode).children('.content').val();
-    localStorage.setItem(textInput, inputToStorage);
+saveBtn.on("click", function(){
+    console.log('howdy');
+    
+    localStorage.setItem("9AM", (text9.val()))
+    localStorage.setItem("10AM", (text10.val()))
+    localStorage.setItem("11AM", (text11.val()))
+    localStorage.setItem("12PM", (text12.val()))
+    localStorage.setItem("13PM", (text13.val()))
+    localStorage.setItem("14PM", (text14.val()))
+    localStorage.setItem("15PM", (text15.val()))
+    localStorage.setItem("16PM", (text16.val()))
+    localStorage.setItem("17PM", (text17.val()))
 })
+
+text9.append(localStorage.getItem("9AM"));
+text10.append(localStorage.getItem("10AM"));
+text11.append(localStorage.getItem("11AM"));
+text12.append(localStorage.getItem("12PM"));
+text13.append(localStorage.getItem("13PM"));
+text14.append(localStorage.getItem("14PM"));
+text15.append(localStorage.getItem("15PM"));
+text16.append(localStorage.getItem("16PM"));
+text17.append(localStorage.getItem("17PM"));
