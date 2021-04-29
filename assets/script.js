@@ -1,7 +1,9 @@
-$("#currentDay").text(moment().format("DD, MMMM, YYYY"));
+$("#currentDay").text(moment().format("Do, MMMM, YYYY, h:mm a"));
 
 var saveBtn = $('.row').children('.btn');
 const textContent = document.getElementsByClassName('content');
+var resetBtn = $('#clear');
+//var resetOption = confirm("Are You Sure You Want To Reset Your Planner?");
 
 var text9 = $("#text9");
 var text10 = $("#text10");
@@ -45,6 +47,7 @@ function setColor(element, color){
 
 saveBtn.on("click", function(){
     console.log('howdy');
+    alert('Your Event Has Been Saved')
     
     localStorage.setItem("9AM", (text9.val()))
     localStorage.setItem("10AM", (text10.val()))
@@ -66,3 +69,11 @@ text14.append(localStorage.getItem("14PM"));
 text15.append(localStorage.getItem("15PM"));
 text16.append(localStorage.getItem("16PM"));
 text17.append(localStorage.getItem("17PM"));
+
+
+resetBtn.on('click', function(){
+    if(confirm("Are You Sure You Want To Reset Your Planner?")===true){
+        localStorage.clear();
+        location.reload();
+    }
+})
