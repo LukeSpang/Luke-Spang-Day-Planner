@@ -18,7 +18,7 @@ BONUS FEATURES!
 The application can be seen below in screen shots and also be viewed live at
 ________
 
-<img src=".assets/images/pic1.png">
+<img src="Luke-Spang-Day-Planner/assets/images/pic1.png">
 <img src=".assets/images/pic2.png">
 <img src=".assets/images/pic3.png">
 <img src=".assets/images/pic4.png">
