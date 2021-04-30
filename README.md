@@ -16,7 +16,7 @@ BONUS FEATURES!
 2. An alert comes up whenever the save button is clicked, to inform users that the information was indeed saved. 
 
 The application can be seen below in screen shots and also be viewed live at
-________
+https://lukespang.github.io/Luke-Spang-Day-Planner/
 
 <img src="./assets/images/pic1.png">
 <img src="./assets/images/pic2.png">
